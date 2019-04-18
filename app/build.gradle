@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.dola.justjava"
-        minSdkVersion 22
+        minSdkVersion 24
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"

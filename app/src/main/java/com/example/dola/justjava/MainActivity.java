@@ -1,5 +1,6 @@
 package com.example.dola.justjava;
 
+import android.icu.text.NumberFormat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the oder button is clicked.
      */
     public void submitOrder(View view){
-        display(1);
+        display(77 * 2 + 1);
     }
 
 
@@ -32,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
      */
     void display(int i){
         TextView qteTextView = (TextView) findViewById(R.id.quantity);
+        //https://gist.github.com/anonymous/fa134c55a4a43e8d6004
 
-        qteTextView.setText(""+i);
+        qteTextView.setText(NumberFormat.getCurrencyInstance().format(i));
     }
 }
