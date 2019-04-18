@@ -14,16 +14,24 @@
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
         android:textAllCaps="true"/>
-
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:onClick="increment"/>
     <TextView
         android:id="@+id/quantity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingBottom="16dp"
         android:textColor="@android:color/black"
         android:textSize="16sp"
-        android:text="0" />
-
+        android:text="2" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        android:text="-"
+        android:onClick="decrement"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

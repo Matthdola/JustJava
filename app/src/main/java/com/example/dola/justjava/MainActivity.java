@@ -28,6 +28,22 @@ public class MainActivity extends AppCompatActivity {
         displayPrice(numberOfCoffees * 23);
     }
 
+    /**
+     * This method is called when the oder button is clicked.
+     */
+    public void increment(View view){
+        int quantity = 3;
+        display(quantity);
+    }
+
+    /**
+     * This method is called when the oder button is clicked.
+     */
+    public void decrement(View view){
+        int quantity = 1;
+        display(quantity);
+    }
+
 
     /**
      * This method display the given quantity value on the screen.
