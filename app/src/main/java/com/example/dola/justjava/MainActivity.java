@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void submitOrder(View view){
         display(77 * 2 + 1);
+        displayPrice(23 * 12 + 23);
     }
 
 
@@ -33,8 +34,18 @@ public class MainActivity extends AppCompatActivity {
      */
     void display(int i){
         TextView qteTextView = (TextView) findViewById(R.id.quantity);
+
+        qteTextView.setText(""+i);
+    }
+
+    /**
+     * This method display the given quantity value on the screen.
+     * @param i
+     */
+    void displayPrice(int i){
+        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
         //https://gist.github.com/anonymous/fa134c55a4a43e8d6004
 
-        qteTextView.setText(NumberFormat.getCurrencyInstance().format(i));
+        priceTextView.setText(NumberFormat.getCurrencyInstance().format(i));
     }
 }
