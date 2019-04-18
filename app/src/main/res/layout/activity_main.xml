@@ -15,8 +15,8 @@
         android:paddingBottom="16dp"
         android:textAllCaps="true"/>
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:text="+"
         android:onClick="increment"/>
     <TextView
@@ -27,8 +27,8 @@
         android:textSize="16sp"
         android:text="2" />
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:paddingBottom="16dp"
         android:text="-"
         android:onClick="decrement"/>
