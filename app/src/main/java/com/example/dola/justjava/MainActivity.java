@@ -13,6 +13,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    int quantity = 2;
+    int coffeePrice = 25;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,16 +25,15 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the oder button is clicked.
      */
     public void submitOrder(View view){
-        int numberOfCoffees = 2;
-        display(77 * numberOfCoffees + 1);
-        displayPrice(numberOfCoffees * 23);
+        display(quantity);
+        displayPrice(quantity * coffeePrice);
     }
 
     /**
      * This method is called when the oder button is clicked.
      */
     public void increment(View view){
-        int quantity = 3;
+        quantity += 1;
         display(quantity);
     }
 
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the oder button is clicked.
      */
     public void decrement(View view){
-        int quantity = 1;
+        quantity -= quantity > 0 ? 1 : 0;
         display(quantity);
     }
 
