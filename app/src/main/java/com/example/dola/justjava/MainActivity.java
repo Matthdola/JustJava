@@ -23,8 +23,9 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the oder button is clicked.
      */
     public void submitOrder(View view){
-        display(77 * 2 + 1);
-        displayPrice(23 * 12 + 23);
+        int numberOfCoffees = 2;
+        display(77 * numberOfCoffees + 1);
+        displayPrice(numberOfCoffees * 23);
     }
 
 
