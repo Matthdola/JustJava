@@ -14,11 +14,13 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     int quantity = 2;
-    int coffeePrice = 25;
+    int coffeePrice = 5;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        TextView coffeePriceView = (TextView) findViewById(R.id.coffee_price_view);
+        coffeePriceView.setText("One cup of coffee = $" + coffeePrice);
     }
 
     /**
@@ -26,7 +28,10 @@ public class MainActivity extends AppCompatActivity {
      */
     public void submitOrder(View view){
         display(quantity);
-        displayPrice(quantity * coffeePrice);
+        int price = quantity * coffeePrice;
+        String message = "Due $" + price + "\n\nThank you for visiting us";
+        displayMessage(message);
+        //displayPrice(quantity * coffeePrice);
     }
 
     /**
@@ -65,5 +70,13 @@ public class MainActivity extends AppCompatActivity {
         //https://gist.github.com/anonymous/fa134c55a4a43e8d6004
 
         priceTextView.setText(NumberFormat.getCurrencyInstance().format(i));
+    }
+
+    /**
+     * This message displays the given text on the screen
+     */
+    private void displayMessage(String message){
+        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
+        priceTextView.setText(message);
     }
 }
